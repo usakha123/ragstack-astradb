@@ -490,13 +490,13 @@ for message in st.session_state.messages:
 
 # Now get a prompt from a user
 question = st.chat_input(lang_dict['assistant_question'])
-with st.sidebar:
-    st.divider()
-    picture = st.camera_input(lang_dict['take_picture'])
-    if picture:
-        response = describeImage(picture.getvalue(), language)
-        picture_desc = response.choices[0].message.content
-        question = picture_desc
+# with st.sidebar:
+#     st.divider()
+#     picture = st.camera_input(lang_dict['take_picture'])
+#     if picture:
+#         response = describeImage(picture.getvalue(), language)
+#         picture_desc = response.choices[0].message.content
+#         question = picture_desc
 
 if question:
     print(f"Got question: {question}")
