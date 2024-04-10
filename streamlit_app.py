@@ -395,7 +395,7 @@ with st.sidebar:
             st.image(f"""./customizations/logo/{username}.png""", use_column_width="always")
             st.text('')
         except:
-            st.image('./customizations/logo/default.svg', use_column_width="always")
+            st.image('./customizations/logo/panda.jpeg', use_column_width="always")
             st.text('')
 
 # Logout button
