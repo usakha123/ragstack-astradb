@@ -218,8 +218,8 @@ def load_model():
     print(f"""load_model""")
     # Get the OpenAI Chat Model
     return ChatOpenAI(
-        temperature=0.3,
-        model='gpt-4-1106-preview',
+        temperature=0.7,
+        model='gpt-4-turbo-preview',
         streaming=True,
         verbose=True
     )
