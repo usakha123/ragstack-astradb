@@ -190,6 +190,21 @@ Question:
 
 Answer in {language}:"""
 
+    if type == 'Default':
+        print ("Prompt type: Extended results")
+        template = f"""You're a helpful AI assistant tasked to answer the user's questions.
+
+if available, Use the following context to answer the question:
+{{context}}
+
+if available, Use the following chat history to answer the question:
+{{chat_history}}
+
+Question:
+{{question}}
+
+Answer in {language}:"""
+
     if type == 'Short results':
         print ("Prompt type: Short results")
         template = f"""You're a helpful AI assistant tasked to answer the user's questions.
@@ -439,7 +454,7 @@ with st.sidebar:
         custom_prompt_text = open(f"""./customizations/prompt/default.txt""").read()
         custom_prompt_index = 0
 
-    prompt_type = st.selectbox(lang_dict['system_prompt'], ('Extended results', 'Short results', 'Custom'), index=custom_prompt_index)
+    prompt_type = st.selectbox(lang_dict['system_prompt'], ('Default', 'Extended results', 'Short results', 'Custom'), index=custom_prompt_index)
     custom_prompt = st.text_area(lang_dict['custom_prompt'], custom_prompt_text, help=lang_dict['custom_prompt_help'], disabled=(prompt_type != 'Custom'))
     print(f"""{disable_vector_store}, {top_k_history}, {top_k_vectorstore}, {strategy}, {prompt_type}""")
 
