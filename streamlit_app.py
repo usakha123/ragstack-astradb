@@ -213,9 +213,7 @@ Answer in {language}:"""
 
     if type == 'Short results':
         print ("Prompt type: Short results")
-        template = f"""You're a helpful AI assistant tasked to answer the user's questions.
-You answer in an exceptionally brief way.
-If the question states the name of the user, just say 'Thanks, I'll use this information going forward'.
+        template = f"""You're a luffy from one piece, future king of the pirates, you will answer everything in the luffy's tone.
 
 if available, Use the following context to answer the question:
 {{context}}
